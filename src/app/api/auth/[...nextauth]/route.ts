@@ -1,6 +1,11 @@
-import NextAuth from "next-auth/next";
-import { options } from "./options";
+import NextAuth from 'next-auth'
+import AppleProvider from 'next-auth/providers/apple'
+import FacebookProvider from 'next-auth/providers/facebook'
+import GoogleProvider from 'next-auth/providers/google'
+import EmailProvider from 'next-auth/providers/email'
 
-const handler = NextAuth(options);
-
-export { handler as GET, handler as POST };
+export default NextAuth({
+  providers: [
+    CredentialsContainer
+  ]
+})

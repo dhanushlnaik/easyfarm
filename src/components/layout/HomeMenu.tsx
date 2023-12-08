@@ -22,10 +22,16 @@ export default function HomeMenu() {
   );
 }
 
-function ProductCard({ bg, image, title }) {
+interface ProductCardProps {
+  bg: string;
+  image: string;
+  title: string;
+}
+
+const ProductCard: React.FC<ProductCardProps> = ({ bg, image, title }) => {
   return (
     <Box
-      className='w-full flex items-center justify-between rounded-3xl p-6 md:p-12 md:hover:cursor-pointer ease-in duration-200'
+      className="w-full flex items-center justify-between rounded-3xl p-6 md:p-12 md:hover:cursor-pointer ease-in duration-200"
       borderRadius="0.55rem"
       bgColor={bg}
       overflow="clip"
@@ -34,17 +40,17 @@ function ProductCard({ bg, image, title }) {
         borderColor: "#4ade80",
       }}
     >
-      <div className=' p-3 rounded-lg text-center'>
+      <div className="p-3 rounded-lg text-center">
         <img src={image} alt={title} />
 
         <Text fontSize={{ base: "2xl", md: "2xl", lg: "4xl" }} fontWeight="bold" className="pt-4 pb-2">
           {title}
         </Text>
 
-        <Button colorScheme='green' variant='outline' leftIcon={<ShoppingCart/>} borderRadius={"40px"}>
+        <Button colorScheme="green" variant="outline" leftIcon={<ShoppingCart />} borderRadius={"40px"}>
           Buy Now
         </Button>
       </div>
     </Box>
   );
-}
+};
