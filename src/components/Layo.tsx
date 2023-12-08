@@ -1,26 +1,24 @@
 "use client";
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
-import './globals.css'
-import { Providers } from './providers'
+import '../app/globals.css'
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500', '700'] })
 import {Toaster} from "react-hot-toast";
 import Header from "@/components/layout/Header";
+import { Providers } from '@/app/providers';
 
 // export const metadata: Metadata = {
 //   title: 'Easy Farm',
 //   description: '',
 // }
 
-export default function RootLayout({
+export default function Layo({
   children,
 }: {
   children: React.ReactNode,
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-    <body className={roboto.className}>
-      <main className=" mx-auto">
+
         <Providers>
           <Toaster />
           <Header />
@@ -29,8 +27,5 @@ export default function RootLayout({
             &copy; 2023 All rights reserved
           </footer>
         </Providers>
-      </main>
-    </body>
-  </html>
   )
 }
