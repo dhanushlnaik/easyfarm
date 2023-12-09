@@ -20,6 +20,7 @@ export default function Hero() {
         Cultivating Connections, Nurturing Communities – Your Direct Link to Farm-Fresh Goodness.
         </p>
         <div className="flex gap-4 text-sm">
+        
         <Button colorScheme='green' variant='solid' rightIcon={<Right />}>
         Order now
   </Button>

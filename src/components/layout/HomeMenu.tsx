@@ -3,6 +3,7 @@ import React from 'react';
 import { Box, Button, Text, useColorModeValue } from "@chakra-ui/react";
 import Head from './Head';
 import ShoppingCart from '../icons/ShoppingCart';
+import NextLink  from 'next/link';
 
 export default function HomeMenu() {
   const bg = useColorModeValue("#f6f6f7", "#171923");
@@ -46,10 +47,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ bg, image, title }) => {
         <Text fontSize={{ base: "2xl", md: "2xl", lg: "4xl" }} fontWeight="bold" className="pt-4 pb-2">
           {title}
         </Text>
-
-        <Button colorScheme="green" variant="outline" leftIcon={<ShoppingCart />} borderRadius={"40px"}>
+        <NextLink href="/checkout" passHref>
+        <Button colorScheme="green" variant="outline" leftIcon={<ShoppingCart />} borderRadius={"40px"} >
           Buy Now
         </Button>
+        </NextLink>
       </div>
     </Box>
   );

@@ -36,29 +36,8 @@ interface NavItem {
 
 const Header: React.FC = () => {
   const NAV_ITEMS: Array<NavItem> = [
-    {
-      label: "Home",
-      href: `/`,
-    },
-    {
-      label: "Inventory",
-      href: `/inventory`,
-    },
 
-    {
-      label: "Insight",
-      href: `/insight`
-    },
-    {
-      label: "More",
-      children: [
-
-        {
-          label: "Resources",
-          href: `/resources`,
-        },
-      ],
-    },
+  
   ];
 
   
@@ -93,7 +72,7 @@ const Header: React.FC = () => {
           className="lg:mx-40 md:mx-20 sm:mx-10 mx-10"
         >
           <Box className={"flex"}>
-            <NextLink href={`/home`} passHref>
+            <NextLink href={`/`} passHref>
               <Text
                 textAlign={useBreakpointValue({ base: "center", md: "left" })}
                 color={"green.500"} // Set the color for "Easy"
@@ -235,7 +214,7 @@ const Header: React.FC = () => {
                 mr={6}
                 pr={4}
               >
-                <NextLink href="/account/oioi" passHref>
+                <NextLink href="/login" passHref>
                   <IconButton
                     aria-label="account"
                     colorScheme="green"
