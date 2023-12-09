@@ -10,10 +10,9 @@ export default function Login() {
       <div className="flex flex-col items-center justify-center w-full md:w-1/4">
         <div className="w-full max-w-md space-y-10">
           <div>
-            <Head title="Welcome Back!" subtitle="Please sign in to your account."/>
-            
+            <Head title="Welcome Back!" subtitle="Please sign in to your account." />
           </div>
-          <form className="mt-8 space-y-6">
+          <form className="space-y-9">
             <div>
               <label htmlFor="email" className="block font-bold text-gray-700">
                 Email address
@@ -22,22 +21,19 @@ export default function Login() {
                 id="email"
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-3 mt-1 border-gray-300 rounded-md focus:border-green-400 focus:ring focus:ring-green-200"
+                className="w-full px-4 py-3 border-gray-300 rounded-md focus:border-green-400 focus:ring focus:ring-green-200"
                 required
               />
             </div>
             <div>
-              <label
-                htmlFor="password"
-                className="block font-bold text-gray-700"
-              >
+              <label htmlFor="password" className="block font-bold text-gray-700">
                 Password
               </label>
               <input
                 id="password"
                 type="password"
                 placeholder="Enter your password"
-                className="w-full px-4 py-3 mt-1 border-gray-300 rounded-md focus:border-green-400 focus:ring focus:ring-green-200"
+                className="w-full px-4 py-3 border-gray-300 rounded-md focus:border-green-400 focus:ring focus:ring-green-200"
                 required
               />
             </div>

@@ -58,9 +58,15 @@ import {
                 {/* Example: */}
                 <Input type="text" placeholder="Card Number" mb={2} />
                 <Input type="text" placeholder="Card Holder Name" mb={2} />
+                <Input type="text" placeholder="CVV" mb={2} />
               </Box>
               <Box>
-                {/* Add additional input fields for card details */}
+              <button
+                type="submit"
+                className="w-full px-4 py-3 font-bold text-white bg-green-400 rounded-md hover:bg-green-600 focus:outline-none focus:shadow-outline-green focus:border-green-700"
+              >
+                Pay Now
+              </button>
               </Box>
             </Stack>
           </GridItem>
