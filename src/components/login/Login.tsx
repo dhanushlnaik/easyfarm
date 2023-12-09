@@ -3,11 +3,14 @@ import Head from "../layout/Head";
 
 export default function Login() {
   return (
-    <div className="flex flex-col items-center md:flex-row md:h-screen">
-      <div className="flex items-center justify-center w-full md:w-1/2">
+    <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
+      {/* Left Side (Image) */}
+      <div className="flex items-center justify-center md:order-1">
         <Image src="/India.jpg" alt="Login Image" width={800} height={600} />
       </div>
-      <div className="flex flex-col items-center justify-center w-full md:w-1/4">
+
+      {/* Right Side (Form) */}
+      <div className="flex flex-col items-center justify-center p-8 md:order-2">
         <div className="w-full max-w-md space-y-10">
           <div>
             <Head title="Welcome Back!" subtitle="Please sign in to your account." />

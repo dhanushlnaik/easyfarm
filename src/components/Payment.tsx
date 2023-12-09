@@ -69,7 +69,12 @@ const Payment: React.FC = () => {
               {/* Example: */}
               <Input type="text" placeholder="Card Number" mb={2} />
               <Input type="text" placeholder="Card Holder Name" mb={2} />
-              <Input type="text" placeholder="CVV" mb={2} />
+              <Input
+  type="text"
+  placeholder="CVV"
+  mb={2}
+  pattern="\d{3}"
+/>
             </Box>
             <Box>
               <NextLink href={"/checkout"} passHref>
